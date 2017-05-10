@@ -1,0 +1,19 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  customer: MyString
+  project: MyString
+  pricing: MyString
+  numidentities: 1
+  userpop: 1
+  expense: 1
+  fixedcon: 1
+
+two:
+  customer: MyString
+  project: MyString
+  pricing: MyString
+  numidentities: 1
+  userpop: 1
+  expense: 1
+  fixedcon: 1

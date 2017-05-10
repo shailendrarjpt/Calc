@@ -1,0 +1,134 @@
+
+html = '<%= escape_javascript(render :partial => "psservices/basic") %>';
+$('#basicarea').html(html);
+// $('#quotewindow').css("display", "block");
+/*html2 = '<%= escape_javascript(render :partial => "psservices/staffing") %>';
+$('#staffarea').html(html2);*/
+$('#quotewindow').css("display", "block");
+
+$(".spinuserpop").TouchSpin({
+        min: 0,
+        max: 100,
+        step: 1,
+        decimals: 0,
+        boostat: 5,
+        maxboostedstep: 10,
+        buttondown_class: 'btn btn-white',
+        buttonup_class: 'btn btn-white'
+});
+
+$(".spincontin").TouchSpin({
+        min: 0,
+        max: 100,
+        step: 1,
+        decimals: 0,
+        boostat: 5,
+        maxboostedstep: 10,
+        postfix: '%',
+        buttondown_class: 'btn btn-white',
+        buttonup_class: 'btn btn-white'
+    });
+
+$(".spinexpense").TouchSpin({
+        min: 0,
+        max: 100,
+        step: 1,
+        decimals: 0,
+        boostat: 5,
+        maxboostedstep: 10,
+        postfix: '%',
+        buttondown_class: 'btn btn-white',
+        buttonup_class: 'btn btn-white'
+    });
+$(".spincalloc").TouchSpin({
+        min: 0,
+        max: 100,
+        step: 10,
+        decimals: 0,
+        boostat: 10,
+        maxboostedstep: 10,
+        postfix: '%',
+        buttondown_class: 'btn btn-white',
+        buttonup_class: 'btn btn-white'
+    });
+
+$(".spin5").TouchSpin({
+        min: 0,
+        max: 30,
+        step: 5,
+        decimals: 0,
+        boostat: 10,
+        maxboostedstep: 10,
+        postfix: '%',
+        buttondown_class: 'btn btn-white',
+        buttonup_class: 'btn btn-white'
+    });
+
+
+$(".helpmsg").tooltip();
+
+$('.chosen-select').chosen({width: "100%"});
+    
+$('#rdfixed').on('click', function () {
+    $('#fxcontin').css('display',"block");
+    $('#fixedcon').val('20');
+});
+
+$('#rdtim').on('click', function () {
+    $('#fxcontin').css('display',"none");
+    $('#fixedcon').val('0');
+});
+
+$('#ag_service').on('click', function () {
+        $.get('/home/agservice');
+});
+
+$('#idmadmin_service').on('click', function () {
+        $.get('/home/idmadminservice');
+});
+    
+$('#mserviceag').on('click', function () {
+       if ($('#agarea').length) {
+            if ($('#agarea').html() == '') {
+                swal({
+                  title: "Please include Access Governance first",
+                  text: "If this is a move of an existing implementation to cloud, choose 'No' for Include Implementation",
+                  type: "warning",
+                  showCancelButton: true,
+                  confirmButtonColor: "#DD6B55",
+                  confirmButtonText: "Yes, add AG tab",
+                  closeOnConfirm: false
+                },
+                function(){
+                    $.get('/home/agservice');
+                    $.get('/home/mserviceag');
+                  swal("Adding Access Governance", "success");
+                });
+            } else {
+                $.get('/home/mserviceag');
+            }
+       }
+});
+
+$('#mserviceida').on('click', function () {
+        if ($('#idadminarea').length) {
+            if ($('#idadminarea').html() == '') {
+                swal({
+                  title: "Please include Identity Administration first",
+                  text: "If this is a move of an existing implementation to cloud, choose 'No' for Include Implementation",
+                  type: "warning",
+                  showCancelButton: true,
+                  confirmButtonColor: "#DD6B55",
+                  confirmButtonText: "Yes, add Id Admin tab",
+                  closeOnConfirm: false
+                },
+                function(){
+                    $.get('/home/idmadminservice');
+                    $.get('/home/mserviceida');
+                  swal("Adding Identity Administration", "success");
+                });
+            } else {
+                $.get('/home/mserviceida');
+            }
+       }
+});

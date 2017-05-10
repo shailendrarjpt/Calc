@@ -1,0 +1,115 @@
+<div id="queuewrapper" class="wrapper wrapper-content animated fadeInDown">
+    <div class="row">                
+        <div class="col-lg-12">
+            <div id="queuearea">
+            </div>
+         </div>
+    </div>      
+</div>
+
+<div id="quotewindow" class="wrapper wrapper-content animated fadeInDown" style="display:none;">
+    
+     <%= form_tag('quote/hours', method: 'post', remote: 'true', class:'form-horizontal new_article', id:'quotepartial', dataType:'script') do %>
+        <%= hidden_field_tag :authenticity_token, form_authenticity_token %>  
+        <div class="row">                
+            <div class="col-lg-12">
+                <div class="tabs-container">
+                    <ul class="nav nav-tabs">
+                        <li class="active"><a data-toggle="tab" href="#tab-1">Project Overview</a></li>
+                        <!--li id="sttab" class=""><a data-toggle="tab" href="#tab-2">Staffing</a></li-->
+                        <li id="agtab" class="" style="display:none;"><a data-toggle="tab" href="#tab-3">Access Governance</a></li>
+                        <li id="idadmintab" class="" style="display:none;"><a data-toggle="tab" href="#tab-4">Identity Administration</a></li>
+                        <li id="mstab" class="" style="display:none;"><a data-toggle="tab" href="#tab-5">Managed Services</a></li>
+                        <div id="quick-full" class="btn-group pull-right">
+                            <button id="quick" class="btn btn-white" type="button">Quick</button>
+                            <button id="full" class="btn btn-primary" type="button">Full</button>
+                        </div>
+                    </ul>
+                    
+                    <div class="tab-content">
+                        <div id="tab-1" class="tab-pane active">
+                            <div class="panel-body">
+                                <div id="basicarea"></div>
+                            </div>
+                        </div>
+                        <div id="tab-2" class="tab-pane">
+                            <div class="panel-body">
+                                <div id="staffarea"></div>
+                            </div>
+                        </div>
+                        <div id="tab-3" class="tab-pane">
+                            <div class="panel-body">
+                                <div id="agarea"></div>
+                            </div>
+                        </div>
+                        <div id="tab-4" class="tab-pane">
+                            <div class="panel-body">
+                                <div id="idadminarea"></div>
+                            </div>
+                        </div>
+                        <div id="tab-5" class="tab-pane">
+                            <div class="panel-body">
+                                <div id="msarea"></div>
+                            </div>
+                        </div>
+                    </div>
+                
+                </div>
+            </div>
+        </div>
+        <div class="row" >
+            <div class="col-lg-12" style="margin-bottom:10px;">
+                <div class="ibox-title" style="border-top:none;">
+                    <div class="btn-group">
+                        <button data-toggle="dropdown" class="btn btn-primary dropdown-toggle">Add Service<span class="caret"></span></button>
+                        <ul class="dropdown-menu">
+                            <li><a id="ag_service" href="#">Access Governance</a></li>
+                            <li><a id="idmadmin_service">Identity Administration</a></li>
+                            <li><a id="mserviceag">Managed Services - AG</a></li>
+                            <li><a id="mserviceida">Managed Services - ID Admin</a></li>
+                        </ul>
+                    </div>
+                    <div class="btn-group pull-right">
+                        <button id="quotebutton" class="btn btn-primary" type="submit"><i class="fa fa-check"></i>&nbsp;Submit</button>
+                        <!--button id="quotebutton" type="submit">Quote</button-->
+                    </div>
+                </div>
+            </div>
+        </div>
+    
+   <% end %>
+       <div class="row">                
+            <div class="col-lg-12">
+                <div id="quotedetail"></div>
+            </div>
+        </div>
+        <div class="row">         
+            <div class="col-lg-12">
+                <div id="quotepricing"></div>
+            </div>
+        </div>
+        <div class="row">         
+            <div class="col-lg-12">
+                <div id="assumptions"></div>
+            </div>
+        </div>
+        <div class="row">         
+            <div class="col-lg-12">
+                <div id="msag"></div>
+            </div>
+        </div>
+        <div class="row">         
+            <div class="col-lg-12">
+                <div id="msidm"></div>
+            </div>
+        </div>
+            <!--div class="col-lg-12">
+                <div id="sowlanguage">SOW Language</div>
+            </div>
+            <div class="col-lg-12">
+                <div id="assumptions">Approval Guidelines - include thresholds</div>
+            </div>
+            <div class="col-lg-12">
+                <div id="assumptions">Domonstrate change in vendor product reprice</div>
+            </div-->
+</div>

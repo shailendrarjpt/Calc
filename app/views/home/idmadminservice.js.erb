@@ -1,0 +1,11 @@
+html = '<%= escape_javascript(render :partial => "psservices/idadmin") %>';
+$('#idadminarea').html(html);
+$('#idadminwindow').css("display","block");
+
+$('#idadmintab').css("display","block")
+// window.location = "#idadminarea";        
+$("#quotepartial").validator('update');
+
+$('.chosen-select').chosen({width: "100%"});
+
+$(".helpmsg").tooltip();

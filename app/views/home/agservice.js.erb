@@ -1,0 +1,88 @@
+html = '<%= escape_javascript(render :partial => "psservices/access_governance") %>';
+$('#agarea').html(html);
+$('#agwindow').css("display","block");
+// window.location = "#agarea";    
+$('#agtab').css("display","block")
+$("#quotepartial").validator('update');
+
+$(".spinuser100").TouchSpin({
+        min: 0,
+        max: 100,
+        step: 1,
+        decimals: 0,
+        boostat: 5,
+        maxboostedstep: 10,
+        buttondown_class: 'btn btn-white',
+        buttonup_class: 'btn btn-white'
+});
+
+$('.chosen-select').chosen({width: "100%"});
+
+$(".helpmsg").tooltip();
+
+/*
+$(".spincontin").TouchSpin({
+        min: 0,
+        max: 100,
+        step: 1,
+        decimals: 0,
+        boostat: 5,
+        maxboostedstep: 10,
+        postfix: '%',
+        buttondown_class: 'btn btn-white',
+        buttonup_class: 'btn btn-white'
+    });
+
+$(".spinexpense").TouchSpin({
+        min: 0,
+        max: 100,
+        step: 1,
+        decimals: 0,
+        boostat: 5,
+        maxboostedstep: 10,
+        postfix: '%',
+        buttondown_class: 'btn btn-white',
+        buttonup_class: 'btn btn-white'
+    });
+
+$('.collapse-link').on('click', function () {
+    var ibox = $(this).closest('div.ibox');
+    var button = $(this).find('i');
+    var content = ibox.find('div.ibox-content');
+    content.slideToggle(200);
+    button.toggleClass('fa-chevron-up').toggleClass('fa-chevron-down');
+    ibox.toggleClass('').toggleClass('border-bottom');
+    setTimeout(function () {
+        ibox.resize();
+        ibox.find('[id^=map-]').resize();
+    }, 50);
+});
+
+$('#quick').on('click', function () {
+    $('#quick').addClass('btn-primary');
+    $('#quick').removeClass('btn-white');
+    $('#full').removeClass('btn-primary');
+    $('#full').addClass('btn-white');
+    $('.quickgroup').hide();
+});
+
+$('#full').on('click', function () {
+    $('#full').addClass('btn-primary');
+    $('#full').removeClass('btn-white');
+    $('#quick').removeClass('btn-primary');
+    $('#quick').addClass('btn-white');
+    $('.quickgroup').show();
+});
+    
+$('#rdfixed').on('click', function () {
+    $('#fxcontin').css('display',"block");
+});
+
+$('#rdtim').on('click', function () {
+    $('#fxcontin').css('display',"none");
+});
+
+$('#ag_service').on('click', function () {
+        $.get('/home/agservice');
+});
+*/

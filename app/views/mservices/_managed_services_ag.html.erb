@@ -1,0 +1,264 @@
+<div class="ibox float-e-margins">
+    <!--div class="ibox-title">
+        <h5>Managed Services</h5>
+        <%= hidden_field_tag 'MS', 'yes' %>
+        <div class="ibox-tools">
+            <a class="collapse-link">
+                <i class="fa fa-chevron-up"></i>
+            </a>
+            <!--a class="dropdown-toggle" data-toggle="dropdown" href="#">
+                <i class="fa fa-wrench"></i>
+            </a>
+            <ul class="dropdown-menu dropdown-user">
+                <li><a href="#">Config option 1</a>
+                </li>
+                <li><a href="#">Config option 2</a>
+                </li>
+            </ul>
+            <a class="close-link">
+                <i class="fa fa-times"></i>
+            </a>
+        </div>
+    </div-->
+    <div class="ibox-content">
+        <div class="row">
+            <div class="col-md-12 text-left">
+                <h4 class="tabheader">Access Governance</h4>
+            </div>
+        </div>
+        <div class="row">
+            <div class="form-group col-md-6">
+                <label class="col-md-4 control-label">Contract Term Months</label>
+                <div class="col-md-8">
+                    <input class="spinusermonths" type="text" value="36" name="msagobj[msterms]" style="text-align:center;" required data-error="Contract Term is required">
+                </div>
+            </div>
+            <div class="form-group col-md-4">
+                <label class="col-md-6 control-label">Campaigns Per Year</label>
+                <div class="col-md-6">
+                    <input type="text" class="form-control text-right" name="msagobj[mscampaigns]" value="4" required data-error="Campaign count is required">
+                    <div class="help-block with-errors"></div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+                <div class="form-group col-md-6">
+                    <label class="col-md-4 control-label">Infrastructure</label>
+                    <div class="col-md-8">
+                        <div class="radio radio-info radio-inline">
+                            <input id="rdtim" type="radio" value="cloud" name="msagobj[msinfrastructure]" checked="checked">
+                            <label for="infra">Cloud</label>
+                        </div>
+                        <div class="radio radio-inline">
+                            <input id="rdfixed" type="radio" value="onprem" name="msagobj[msinfrastructure]" >
+                            <label for="infra">On-prem</label>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group col-md-6">
+                    <label class="col-md-4 control-label">Include Implementation</label>
+                    <div class="col-md-8">
+                        <div class="radio radio-info radio-inline">
+                            <input id="rdtim" type="radio" value="yes" name="msagobj[msimplement]" checked="checked">
+                            <label for="msimplement">Yes</label>
+                        </div>
+                        <div class="radio radio-inline">
+                            <input id="rdfixed" type="radio" value="no" name="msagobj[msimplement]" >
+                            <label for="msimplement">No</label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        <div class="row">
+            <div class="form-group col-md-6">
+                <label class="col-md-4 control-label">Service Level</label>
+                <div class="col-md-8">
+                    <select data-placeholder="Choose" class="chosen-select" tabindex="2" name="msagobj[svclvl]" required data-error="Service Level is required">
+                        <option value="">Select</option>
+                        <option value="silver">Silver</option>
+                        <option value="gold">Gold</option>
+                        <option value="platinum">Platinum</option>
+                    </select>
+                    <div class="help-block with-errors"></div>
+                </div>
+            </div>
+            <div class="form-group col-md-4">
+                <label class="col-md-6 control-label">Software License Cost</label>
+                <div class="col-md-6">
+                    <input type="text" class="form-control text-right" name="msagobj[swcost]" value="0" required data-error="Software Licensing is required">
+                    <div class="help-block with-errors"></div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="form-group col-md-6">
+                <label class="col-md-4 control-label">Support Coverage</label>
+                <div class="col-md-8">
+                    <select data-placeholder="Choose support" class="chosen-select" tabindex="2" name="msagobj[support]" required data-error="Support Coverage is required">
+                        <option value="">Select</option>
+                        <option value="eightbyfive">8 x 5</option>
+                        <option value="eightbyseven">8 x 7</option>
+                        <option value="twentyfourbyfive">24 x 5</option>
+                        <option value="twentyfourbyseven">24 x 7</option>
+                    </select>
+                    <div class="help-block with-errors"></div>
+                </div>
+            </div>
+            <div class="form-group col-md-4">
+                <label class="col-md-6 control-label">Software Maintenance Cost/Yr</label>
+                <div class="col-md-6">
+                    <input type="text" class="form-control text-right" name="msagobj[swmcost]" value="0" required data-error="Software Maintenance is required">
+                    <div class="help-block with-errors"></div>
+                </div>
+            </div>
+        </div>
+        
+            <!--div class="quickgroup">
+                <div class="row">
+                    <div class="form-group col-md-3">
+                        <label class="col-md-8 control-label">Hardware Sizing</label>
+                        <div class="col-md-4">
+                            <div class="switch">
+                                <div class="onoffswitch">
+                                    <input type="checkbox" checked class="onoffswitch-checkbox" id="hwsize" name="agobj[hwsize]">
+                                    <label class="onoffswitch-label" for="hwsize">
+                                        <span class="onoffswitch-inner"></span>
+                                        <span class="onoffswitch-switch"></span>
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group col-md-3">
+                        <label class="col-md-8 control-label">Requirements</label>
+                        <div class="col-md-4">
+                             <div class="switch">
+                                <div class="onoffswitch">
+                                    <input type="checkbox" checked class="onoffswitch-checkbox" id="reqmts" name="agobj[reqmts]">
+                                    <label class="onoffswitch-label" for="reqmts">
+                                        <span class="onoffswitch-inner"></span>
+                                        <span class="onoffswitch-switch"></span>
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group col-md-3">
+                        <label class="col-md-8 control-label">Use Cases</label>
+                        <div class="col-md-4">
+                            <div class="switch">
+                                <div class="onoffswitch">
+                                    <input type="checkbox" checked class="onoffswitch-checkbox" id="usecases" name="agobj[usecases]">
+                                    <label class="onoffswitch-label" for="usecases">
+                                        <span class="onoffswitch-inner"></span>
+                                        <span class="onoffswitch-switch"></span>
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group col-md-3">
+                    <label class="col-md-8 control-label">Architecture</label>
+                        <div class="col-md-4">
+                             <div class="switch">
+                                <div class="onoffswitch">
+                                    <input type="checkbox" checked class="onoffswitch-checkbox" id="arch" name="agobj[arch]">
+                                    <label class="onoffswitch-label" for="arch">
+                                        <span class="onoffswitch-inner"></span>
+                                        <span class="onoffswitch-switch"></span>
+                                    </label>
+                                </div>
+                            </div>
+                       </div>
+                    </div>
+                </div> 
+                <div class="row">
+                    <div class="form-group col-md-3">
+                        <label class="col-md-8 control-label">Design Specification</label>
+                        <div class="col-md-4">
+                             <div class="switch">
+                                <div class="onoffswitch">
+                                    <input type="checkbox" checked class="onoffswitch-checkbox" id="design" name="agobj[design]">
+                                    <label class="onoffswitch-label" for="design">
+                                        <span class="onoffswitch-inner"></span>
+                                        <span class="onoffswitch-switch"></span>
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group col-md-3">
+                        <label class="col-md-8 control-label">Build Document</label>
+                        <div class="col-md-4">
+                              <div class="switch">
+                                <div class="onoffswitch">
+                                    <input type="checkbox" checked class="onoffswitch-checkbox" id="builddoc" name="agobj[builddoc]">
+                                    <label class="onoffswitch-label" for="builddoc">
+                                        <span class="onoffswitch-inner"></span>
+                                        <span class="onoffswitch-switch"></span>
+                                    </label>
+                                </div>
+                            </div>
+                       </div>
+                    </div>
+                    <div class="form-group col-md-3">
+                        <label class="col-md-8 control-label">Operations Guide</label>
+                        <div class="col-md-4">
+                                <div class="switch">
+                                <div class="onoffswitch">
+                                    <input type="checkbox" checked class="onoffswitch-checkbox" id="opguide" name="agobj[opguide]">
+                                    <label class="onoffswitch-label" for="opguide">
+                                        <span class="onoffswitch-inner"></span>
+                                        <span class="onoffswitch-switch"></span>
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group col-md-3">
+                        <label class="col-md-8 control-label">Project Schedule</label>
+                        <div class="col-md-4">
+                              <div class="switch">
+                                <div class="onoffswitch">
+                                    <input type="checkbox" checked class="onoffswitch-checkbox" id="schedule" name="agobj[schedule]">
+                                    <label class="onoffswitch-label" for="schedule">
+                                        <span class="onoffswitch-inner"></span>
+                                        <span class="onoffswitch-switch"></span>
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div> 
+
+                <div class="row">
+                    <div class="form-group col-md-4">
+                        <label class="col-md-6 control-label">Weeks of UAT Support</label>
+                        <div class="col-md-6">
+                            <input type="text" class="form-control text-right" name="agobj[uat]" value="2" required data-error="UAT Support Weeks is required">
+                            <div class="help-block with-errors"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>  <!-- quick -->
+    
+</div>
+
+<% content_for :javascript do %>
+
+<script type="text/javascript">
+
+
+$(function() {
+
+    $('.i-checks').iCheck({
+        checkboxClass: 'icheckbox_square-green',
+        radioClass: 'iradio_square-green',
+    });
+
+});
+
+</script>
+<% end %>
+
+

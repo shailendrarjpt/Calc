@@ -1,0 +1,308 @@
+<div class="ibox float-e-margins">
+    <div class="ibox-content">
+        <div class="form-group col-md-6 pull-right">
+            <label class="col-md-4 control-label">Product Vendor</label>
+            <div class="col-md-8">
+                <select data-placeholder="Choose a Vendor" class="chosen-select" tabindex="2" name="idmobj[vendor]" required data-error="Vendor is required">
+                    <option value="">Select</option>
+                    <option value="CA">CA</option>
+                    <option value="RSA">RSA</option>
+                    <option value="Oracle">Oracle</option>
+                    <option value="SailPoint IIQ">SailPoint IIQ</option>
+                </select>
+                <div class="help-block with-errors"></div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12 text-left">
+                <h4 class="tabheader">Fulfilment</h4>
+            </div>
+        </div>
+        <div class="row">
+            <div class="form-group col-md-4">
+                <label class="col-md-6 control-label helpmsg" title="1-7 Low, 7-25 Medium, 25+ Complex. Unusual applications, complex workflows or complex provisioning increases level.">Fulfilment Design</label>
+                <div class="col-md-6">
+                    <select data-placeholder="Choose Fulfilment Complexity" class="chosen-select" tabindex="2" name="idmobj[fcomplex]" required data-error="Fulfilment Design field is required">
+                        <option value="low">Low</option>
+                        <option value="medium" selected>Medium</option>
+                        <option value="complex">Complex</option>
+                    </select>
+                    <div class="help-block with-errors"></div>
+                </div>
+            </div>
+            <div class="form-group col-md-4">
+                <label class="col-md-6 control-label">Custom Ticketing Integration</label>
+                <div class="col-md-6">
+                    <input type="text" class="form-control text-right" name="idmobj[custticket]" value="0">
+                    <div class="help-block with-errors"></div>
+                </div>     
+            </div>
+        </div>
+        <div class="row">
+            <div class="form-group col-md-4">
+                <label class="col-md-6 control-label helpmsg" data-placement="top" title="Custom-written connectors">Complex Connectors</label>
+                <div class="col-md-6">
+                    <input type="text" class="form-control text-right" name="idmobj[complexconn]" value="0" required data-error="Complex Connector count is required">
+                    <div class="help-block with-errors"></div>
+                </div>
+            </div>
+            <div class="form-group col-md-4">
+                <label class="col-md-6 control-label helpmsg" data-placement="top" title="JDBC, MySQL, ServiceNow, SQL/DB, LDAP, other standard protocol connectors">Moderately Complex Connectors</label>
+                <div class="col-md-6">
+                    <input type="text" class="form-control text-right" name="idmobj[modconn]" value="0" required data-error="Moderately Complex Connector count is required">
+                    <div class="help-block with-errors"></div>
+                </div>
+            </div>
+            <div class="form-group col-md-4">
+                <label class="col-md-6 control-label helpmsg" data-placement="top" title="Delimited File, AD, out-of-box">Standard Connectors</label>
+                <div class="col-md-6">
+                    <input type="text" class="form-control text-right" name="idmobj[stdconn]" value="0" required data-error="Standard Connectors count is required">
+                    <div class="help-block with-errors"></div>
+                </div>
+            </div>   
+        </div>
+        <div class="row">
+            <div class="col-md-12 text-left">
+                <h4 class="tabheader">Rules</h4>
+            </div>
+        </div>
+        <div class="row">
+            <div class="form-group col-md-4">
+                <label class="col-md-6 control-label helpmsg" title="1-10 Low, 10-100 Medium, 100+ Complex">Rules Design</label>
+                <div class="col-md-6">
+                    <select data-placeholder="Choose AR Complexity" class="chosen-select" tabindex="2" name="idmobj[rardesign]" required data-error="Rules Arch/Design is required">
+                        <option value="none">None</option>
+                        <option value="low">Low</option>
+                        <option value="medium">Medium</option>
+                        <option value="complex">Complex</option>
+                    </select>
+                    <div class="help-block with-errors"></div>
+                </div>
+            </div>
+            <div class="form-group col-md-4">
+                <label class="col-md-6 control-label helpmsg" title="Customization required based on added rules.">Rule Workflow/Escalation/Emails</label>
+                <div class="col-md-6">
+                    <input type="text" class="form-control text-right" name="idmobj[ruleemail]" value="5">
+                    <div class="help-block with-errors"></div>
+                </div>
+            </div>
+            <div class="form-group col-md-4">
+                <label class="col-md-6 control-label">User/SOD/Attribute Rules</label>
+                <div class="col-md-6">
+                    <input type="text" class="form-control text-right" name="idmobj[usarules]" value="5">
+                    <div class="help-block with-errors"></div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <!--div class="form-group col-md-4">
+                    <label class="col-md-6 control-label">JML Policy</label>
+                    <div class="col-md-4">
+                        <div class="switch">
+                            <div class="onoffswitch">
+                                <input type="checkbox" checked class="onoffswitch-checkbox" id="hwsize" name="idmobj[jml]">
+                                <label class="onoffswitch-label" for="hwsize">
+                                    <span class="onoffswitch-inner"></span>
+                                    <span class="onoffswitch-switch"></span>
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+            </div-->
+            <div class="form-group col-md-4">
+                <label class="col-md-6 control-label">JML Complexity</label>
+                <div class="col-md-6">
+                    <select data-placeholder="Choose the complexity of the JML" class="chosen-select" tabindex="2" name="idmobj[jmlcomplex]" required data-error="JML Complexity is required">
+                        <option value="none">None</option>
+                        <option value="simple">Simple</option>
+                        <option value="medium" selected>Medium</option>
+                        <option value="complex">Complex</option>
+                    </select>
+                    <div class="help-block with-errors"></div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="form-group col-md-4">
+                <label class="col-md-6 control-label">Additional Complex Rules</label>
+                <div class="col-md-6">
+                    <input type="text" class="form-control text-right" name="idmobj[addlcomplex]" value="0">
+                    <div class="help-block with-errors"></div>
+                </div>
+            </div>
+            <div class="form-group col-md-4">
+                <label class="col-md-6 control-label">Additional Moderate Rules</label>
+                <div class="col-md-6">
+                    <input type="text" class="form-control text-right" name="idmobj[addlmod]" value="0">
+                    <div class="help-block with-errors"></div>
+                </div>
+            </div>
+            <div class="form-group col-md-4">
+                <label class="col-md-6 control-label">Additional Simple Rules</label>
+                <div class="col-md-6">
+                    <input type="text" class="form-control text-right" name="idmobj[addlsimple]" value="0">
+                    <div class="help-block with-errors"></div>
+                </div>
+            </div>    
+        </div>
+        <div class="row">
+            <div class="col-md-12 text-left">
+                <h4 class="tabheader">Other</h4>
+            </div>
+        </div>
+       <div class="row">
+            <div class="form-group col-md-4">
+                <label class="col-md-6 control-label helpmsg" title="1-7 Low, 7-25 Medium, 25+ Complex. Unusual applications, complex workflows or complex provisioning increases level.">Password Management Design</label>
+                <div class="col-md-6">
+                    <select data-placeholder="Choose Fulfilment Complexity" class="chosen-select" tabindex="2" name="idmobj[pwmgt]" required data-error="Fulfilment Design field is required">
+                        <option value="none">None</option>
+                        <option value="low">Low</option>
+                        <option value="medium">Medium</option>
+                        <option value="complex">Complex</option>
+                    </select>
+                    <div class="help-block with-errors"></div>
+                </div>
+            </div>
+            <div class="form-group col-md-4">
+                <label class="col-md-6 control-label helpmsg" title="1-7 Low, 7-25 Medium, 25+ Complex. Unusual applications, complex workflows or complex provisioning increases level.">Attribute Sync Design</label>
+                <div class="col-md-6">
+                    <select data-placeholder="Choose Fulfilment Complexity" class="chosen-select" tabindex="2" name="idmobj[async]" required data-error="Fulfilment Design field is required">
+                        <option value="none">None</option>
+                        <option value="low">Low</option>
+                        <option value="medium">Medium</option>
+                        <option value="complex">Complex</option>
+                    </select>
+                    <div class="help-block with-errors"></div>
+                </div>
+            </div>
+           <div class="form-group col-md-4">
+                <label class="col-md-6 control-label">Password Sync</label>
+                <div class="col-md-4">
+                    <div class="switch">
+                        <div class="onoffswitch">
+                            <input type="checkbox" checked class="onoffswitch-checkbox" id="psync" name="idmobj[psync]">
+                            <label class="onoffswitch-label" for="psync">
+                                <span class="onoffswitch-inner"></span>
+                                <span class="onoffswitch-switch"></span>
+                            </label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="form-group col-md-4">
+                <label class="col-md-6 control-label">Forgotten Password</label>
+                <div class="col-md-6">
+                    <input type="text" class="form-control text-right" name="idmobj[fgtpass]" value="0" required data-error="Forgotten password targets field is required">
+                    <div class="help-block with-errors"></div>
+                </div>
+            </div> 
+            <div class="form-group col-md-4">
+                <label class="col-md-6 control-label">Password Composition Policies</label>
+                <div class="col-md-6">
+                    <input type="text" class="form-control text-right" name="idmobj[passpol]" value="0" required data-error="Password Composition field is required">
+                    <div class="help-block with-errors"></div>
+                </div>
+            </div> 
+        </div>
+        <div class="row">
+            <div class="form-group col-md-4">
+                <label class="col-md-6 control-label helpmsg" title="Retrieval of existing password, potentially by answering security questions.">Password Retrieval</label>
+                <div class="col-md-4">
+                    <div class="switch">
+                        <div class="onoffswitch">
+                            <input type="checkbox" class="onoffswitch-checkbox" id="pret" name="idmobj[pret]">
+                            <label class="onoffswitch-label" for="pret">
+                                <span class="onoffswitch-inner"></span>
+                                <span class="onoffswitch-switch"></span>
+                            </label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="form-group col-md-4">
+                <label class="col-md-6 control-label">Windows Desktop Reset</label>
+                <div class="col-md-4">
+                    <div class="switch">
+                        <div class="onoffswitch">
+                            <input type="checkbox" class="onoffswitch-checkbox" id="wdesk" name="idmobj[wdesk]">
+                            <label class="onoffswitch-label" for="wdesk">
+                                <span class="onoffswitch-inner"></span>
+                                <span class="onoffswitch-switch"></span>
+                            </label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+             <div class="form-group col-md-4">
+                <label class="col-md-6 control-label">User Onboarding (Registration)</label>
+                <div class="col-md-4">
+                    <div class="switch">
+                        <div class="onoffswitch">
+                            <input type="checkbox" class="onoffswitch-checkbox" id="usonboard" name="idmobj[usonboard]">
+                            <label class="onoffswitch-label" for="usonboard">
+                                <span class="onoffswitch-inner"></span>
+                                <span class="onoffswitch-switch"></span>
+                            </label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12 text-left">
+                <h4 class="tabheader">Custom Hours</h4>
+            </div>
+        </div>
+        <div class="row">
+            <div class="form-group col-md-4">
+                <label class="col-md-6 control-label">Custom PM Hours</label>
+                <div class="col-md-6">
+                    <input type="text" class="form-control text-right" name="idmobj[cswfpm]" value="0"  data-error="Forgotten password targets field is required">
+                    <div class="help-block with-errors"></div>
+                </div>
+            </div> 
+            <div class="form-group col-md-4">
+                <label class="col-md-6 control-label">Custom BA Hours</label>
+                <div class="col-md-6">
+                    <input type="text" class="form-control text-right" name="idmobj[cswfba]" value="0"  data-error="Forgotten password targets field is required">
+                    <div class="help-block with-errors"></div>
+                </div>
+            </div> 
+            <div class="form-group col-md-4">
+                <label class="col-md-6 control-label">Custom Architect Hours</label>
+                <div class="col-md-6">
+                    <input type="text" class="form-control text-right" name="idmobj[cswfarch]" value="0"  data-error="Forgotten password targets field is required">
+                    <div class="help-block with-errors"></div>
+                </div>
+            </div> 
+            <div class="form-group col-md-4">
+                <label class="col-md-6 control-label">Custom Consultant Hours</label>
+                <div class="col-md-6">
+                    <input type="text" class="form-control text-right" name="idmobj[cswfcon]" value="0" required data-error="Forgotten password targets field is required">
+                    <div class="help-block with-errors"></div>
+                </div>
+            </div> 
+        </div>
+    </div> 
+</div>
+
+<% content_for :javascript do %>
+
+<script type="text/javascript">
+
+
+$(function() {
+
+    $('.i-checks').iCheck({
+        checkboxClass: 'icheckbox_square-green',
+        radioClass: 'iradio_square-green',
+    });
+
+});
+
+</script>
+<% end %>
+
+

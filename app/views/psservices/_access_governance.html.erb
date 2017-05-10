@@ -1,0 +1,244 @@
+<div class="ibox float-e-margins">
+    <!-- div class="ibox-title">
+        <h5>Access Governance</h5>
+        <%= hidden_field_tag 'AG', 'yes' %>
+        <div class="ibox-tools">
+            <a class="collapse-link">
+                <i class="fa fa-chevron-up"></i>
+            </a>
+            <!--a class="dropdown-toggle" data-toggle="dropdown" href="#">
+                <i class="fa fa-wrench"></i>
+            </a>
+            <ul class="dropdown-menu dropdown-user">
+                <li><a href="#">Config option 1</a>
+                </li>
+                <li><a href="#">Config option 2</a>
+                </li>
+            </ul>
+            <a class="close-link">
+                <i class="fa fa-times"></i>
+            </a>
+        </div>
+    </div-->
+    <div class="ibox-content">
+        <div class="row">
+            <div class="form-group col-md-6">
+                <label class="col-md-4 control-label">Number of Environments</label>
+                <div class="col-md-8">
+                    <input class="spinuser100" type="text" value="3" name="agobj[envs]" style="text-align:center;">
+                </div>
+            </div>
+            <div class="form-group col-md-6">
+                <label class="col-md-4 control-label">Product Vendor</label>
+                <div class="col-md-8">
+                    <select data-placeholder="Choose a Vendor" class="chosen-select" tabindex="2" name="agobj[vendor]" required data-error="Vendor is required">
+                        <option value="">Select</option>
+                        <option value="CA">CA</option>
+                        <option value="RSA">RSA</option>
+                        <option value="Oracle">Oracle</option>
+                        <option value="SailPoint IIQ">SailPoint IIQ</option>
+                    </select>
+                    <div class="help-block with-errors"></div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="form-group col-md-4">
+                <label class="col-md-6 control-label helpmsg" data-placement="top" title="Custom-written connectors">R/O Complex Connectors</label>
+                <div class="col-md-6">
+                    <input type="text" class="form-control text-right" name="agobj[complexconn]" value="0" required data-error="Complex Connector count is required">
+                    <div class="help-block with-errors"></div>
+                </div>
+            </div>
+            <div class="form-group col-md-4">
+                <label class="col-md-6 control-label helpmsg" data-placement="top" title="JDBC, MySQL, ServiceNow, SQL/DB, LDAP, other standard protocol connectors">R/O Moderately Complex Connectors</label>
+                <div class="col-md-6">
+                    <input type="text" class="form-control text-right" name="agobj[modconn]" value="0" required data-error="Moderately Complex Connector count is required">
+                    <div class="help-block with-errors"></div>
+                </div>
+            </div>
+            <div class="form-group col-md-4">
+                <label class="col-md-6 control-label helpmsg" data-placement="top" title="Delimited File, AD, out-of-box"># R/O Standard Connectors</label>
+                <div class="col-md-6">
+                    <input type="text" class="form-control text-right" name="agobj[stdconn]" value="0" required data-error="Standard Connectors count is required">
+                    <div class="help-block with-errors"></div>
+                </div>
+            </div>   
+        </div>
+            <div class="quickgroup">
+                <div class="row">
+                    <div class="form-group col-md-3">
+                        <label class="col-md-8 control-label">Hardware Sizing</label>
+                        <div class="col-md-4">
+                            <div class="switch">
+                                <div class="onoffswitch">
+                                    <input type="checkbox" checked class="onoffswitch-checkbox" id="hwsize" name="agobj[hwsize]">
+                                    <label class="onoffswitch-label" for="hwsize">
+                                        <span class="onoffswitch-inner"></span>
+                                        <span class="onoffswitch-switch"></span>
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group col-md-3">
+                        <label class="col-md-8 control-label">Requirements</label>
+                        <div class="col-md-4">
+                             <div class="switch">
+                                <div class="onoffswitch">
+                                    <input type="checkbox" checked class="onoffswitch-checkbox" id="reqmts" name="agobj[reqmts]">
+                                    <label class="onoffswitch-label" for="reqmts">
+                                        <span class="onoffswitch-inner"></span>
+                                        <span class="onoffswitch-switch"></span>
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!--div class="form-group col-md-3">
+                        <label class="col-md-8 control-label">Use Cases</label>
+                        <div class="col-md-4">
+                            <div class="switch">
+                                <div class="onoffswitch">
+                                    <input type="checkbox" checked class="onoffswitch-checkbox" id="usecases" name="agobj[usecases]">
+                                    <label class="onoffswitch-label" for="usecases">
+                                        <span class="onoffswitch-inner"></span>
+                                        <span class="onoffswitch-switch"></span>
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                    </div-->
+                    <div class="form-group col-md-3">
+                    <label class="col-md-8 control-label">Architecture</label>
+                        <div class="col-md-4">
+                             <div class="switch">
+                                <div class="onoffswitch">
+                                    <input type="checkbox" checked class="onoffswitch-checkbox" id="arch" name="agobj[arch]">
+                                    <label class="onoffswitch-label" for="arch">
+                                        <span class="onoffswitch-inner"></span>
+                                        <span class="onoffswitch-switch"></span>
+                                    </label>
+                                </div>
+                            </div>
+                       </div>
+                    </div>
+                </div> 
+                <div class="row">
+                    <div class="form-group col-md-3">
+                        <label class="col-md-8 control-label">Design Specification</label>
+                        <div class="col-md-4">
+                             <div class="switch">
+                                <div class="onoffswitch">
+                                    <input type="checkbox" checked class="onoffswitch-checkbox" id="design" name="agobj[design]">
+                                    <label class="onoffswitch-label" for="design">
+                                        <span class="onoffswitch-inner"></span>
+                                        <span class="onoffswitch-switch"></span>
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group col-md-3">
+                        <label class="col-md-8 control-label">Build Document</label>
+                        <div class="col-md-4">
+                              <div class="switch">
+                                <div class="onoffswitch">
+                                    <input type="checkbox" checked class="onoffswitch-checkbox" id="builddoc" name="agobj[builddoc]">
+                                    <label class="onoffswitch-label" for="builddoc">
+                                        <span class="onoffswitch-inner"></span>
+                                        <span class="onoffswitch-switch"></span>
+                                    </label>
+                                </div>
+                            </div>
+                       </div>
+                    </div>
+                    <div class="form-group col-md-3">
+                        <label class="col-md-8 control-label">Operations Guide</label>
+                        <div class="col-md-4">
+                                <div class="switch">
+                                <div class="onoffswitch">
+                                    <input type="checkbox" checked class="onoffswitch-checkbox" id="opguide" name="agobj[opguide]">
+                                    <label class="onoffswitch-label" for="opguide">
+                                        <span class="onoffswitch-inner"></span>
+                                        <span class="onoffswitch-switch"></span>
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group col-md-3">
+                        <label class="col-md-8 control-label">Project Schedule</label>
+                        <div class="col-md-4">
+                              <div class="switch">
+                                <div class="onoffswitch">
+                                    <input type="checkbox" checked class="onoffswitch-checkbox" id="schedule" name="agobj[schedule]">
+                                    <label class="onoffswitch-label" for="schedule">
+                                        <span class="onoffswitch-inner"></span>
+                                        <span class="onoffswitch-switch"></span>
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div> 
+                <!--div class="form-group">
+                    <label class="col-sm-3 control-label">Custom Placeholder</label>
+                    <div class="col-sm-4">
+                        <input type="text" class="form-control">
+                    </div>
+                </div-->  
+                <div class="row">
+                    <div class="form-group col-md-4">
+                        <label class="col-md-6 control-label">Custom Reports</label>
+                        <div class="col-md-6">
+                            <input type="text" class="form-control text-right" name="agobj[custrpt]" value="0">
+                            <div class="help-block with-errors"></div>
+                        </div>
+                    </div>
+                    <div class="form-group col-md-4">
+                        <label class="col-md-6 control-label">User-Manager Access Reviews </label>
+                        <div class="col-md-6">
+                            <input type="text" class="form-control text-right" name="agobj[usermgrar]" value="5" required data-error="Access Review count required">
+                            <div class="help-block with-errors"></div>
+                        </div>
+                    </div>
+                    <div class="form-group col-md-4">
+                        <label class="col-md-6 control-label">App Owner Access Reviews </label>
+                        <div class="col-md-6">
+                            <input type="text" class="form-control text-right" name="agobj[appownar]" value="5" required data-error="Access Review count required">
+                            <div class="help-block with-errors"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="form-group col-md-4">
+                        <label class="col-md-6 control-label">Weeks of UAT Support</label>
+                        <div class="col-md-6">
+                            <input type="text" class="form-control text-right" name="agobj[uat]" value="2" required data-error="UAT Support Weeks is required">
+                            <div class="help-block with-errors"></div>
+                        </div>
+                    </div>
+                </div>
+            </div> <!-- quick -->
+        </div>  
+    </div>
+
+<% content_for :javascript do %>
+
+<script type="text/javascript">
+
+
+$(function() {
+
+    $('.i-checks').iCheck({
+        checkboxClass: 'icheckbox_square-green',
+        radioClass: 'iradio_square-green',
+    });
+
+});
+
+</script>
+<% end %>
+
+

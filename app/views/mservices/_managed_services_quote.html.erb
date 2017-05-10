@@ -1,0 +1,94 @@
+<div id="quotems">
+    <% if @mspricingag != nil %>
+        <div class="ibox float-e-margins">
+            <div class="ibox-title">
+                <h5><%= @basic["customer"] %> - <%= @basic["project"] %> - Managed Services Quote Pricing - <%= @mspricingag.includeimp %> - Access Governance</h5>
+                <div class="ibox-tools">
+                    <a class="collapse-link">
+                        <i class="fa fa-chevron-up"></i>
+                    </a>
+                    <a class="close-link">
+                        <i class="fa fa-times"></i>
+                    </a>
+                </div>
+            </div>
+            <div class="ibox-content">
+                <div class="table-responsive">
+                    <table class="table table-striped table-bordered table-hover quotetable" >
+                       <thead>
+                            <tr>
+                                <th></th>
+                                <th></th>
+                            </tr>
+
+                        </thead>
+                        <tbody>
+                            <tr class="gradeX">
+                                <td class="text-left">Total Contract Value</td>
+                                <td class="text-right"><%= number_to_currency(@mspricingag.tcv) %></td>
+                            </tr>
+                            <tr class="gradeX">
+                                <td class="text-left">Per Month Contract Value</td>
+                                <td class="text-right"><%= number_to_currency(@mspricingag.pmv) %></td>
+                            </tr>                
+                            <tr class="gradeX">
+                                <td class="text-left">Price Per Identity</td>
+                                <td class="text-right"><%= number_to_currency(@mspricingag.ppi) %></td>
+                             </tr>                
+                            <tr class="gradeX">
+                                <td class="text-left">Infrastructure Cost</td>
+                                <td class="text-right"><%= number_to_currency(@mspricingag.infcost) %></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    <% end %>
+    <% if @mspricingida != nil %>
+        <div class="ibox float-e-margins">
+            <div class="ibox-title">
+                <h5><%= @basic["customer"] %> - <%= @basic["project"] %> - Managed Services Quote Pricing - <%= @mspricingida.includeimp %> - Identity Administration</h5>
+                <div class="ibox-tools">
+                    <a class="collapse-link">
+                        <i class="fa fa-chevron-up"></i>
+                    </a>
+                    <a class="close-link">
+                        <i class="fa fa-times"></i>
+                    </a>
+                </div>
+            </div>
+            <div class="ibox-content">
+                <div class="table-responsive">
+                    <table class="table table-striped table-bordered table-hover quotetable" >
+                       <thead>
+                            <tr>
+                                <th></th>
+                                <th></th>
+                            </tr>
+
+                        </thead>
+                        <tbody>
+                            <tr class="gradeX">
+                                <td class="text-left">Total Contract Value</td>
+                                <td class="text-right"><%= number_to_currency(@mspricingida.tcv) %></td>
+                            </tr>
+                            <tr class="gradeX">
+                                <td class="text-left">Per Month Contract Value</td>
+                                <td class="text-right"><%= number_to_currency(@mspricingida.pmv) %></td>
+                            </tr>                
+                            <tr class="gradeX">
+                                <td class="text-left">Price Per Identity</td>
+                                <td class="text-right"><%= number_to_currency(@mspricingida.ppi) %></td>
+                             </tr>                
+                            <tr class="gradeX">
+                                <td class="text-left">Infrastructure Cost</td>
+                                <td class="text-right"><%= number_to_currency(@mspricingida.infcost) %></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    <% end %>
+</div>

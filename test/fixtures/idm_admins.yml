@@ -1,0 +1,53 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  rardesign: MyString
+  ruleemail: 1
+  usarules: 1
+  jmlcomplex: MyString
+  addlcomplex: 1
+  addlmod: 1
+  addlsimple: 1
+  fcomplex: MyString
+  otbplatform: 1
+  otbappl: 1
+  otbticket: 1
+  custticket: 1
+  pwmgt: MyString
+  async: MyString
+  targets: 1
+  fgtpass: 1
+  pret: false
+  psync: false
+  wdesk: false
+  astrans: 1
+  usonboard: 1
+  cswfpm: 1
+  cswfba: 1
+  cswfcon: 1
+
+two:
+  rardesign: MyString
+  ruleemail: 1
+  usarules: 1
+  jmlcomplex: MyString
+  addlcomplex: 1
+  addlmod: 1
+  addlsimple: 1
+  fcomplex: MyString
+  otbplatform: 1
+  otbappl: 1
+  otbticket: 1
+  custticket: 1
+  pwmgt: MyString
+  async: MyString
+  targets: 1
+  fgtpass: 1
+  pret: false
+  psync: false
+  wdesk: false
+  astrans: 1
+  usonboard: 1
+  cswfpm: 1
+  cswfba: 1
+  cswfcon: 1

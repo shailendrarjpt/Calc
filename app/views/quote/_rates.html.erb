@@ -1,0 +1,55 @@
+<div id="quoterates">
+    <div class="ibox float-e-margins">
+        <div class="ibox-title">
+            <h5><%= @basic["customer"] %> - <%= @basic["project"] %> - Professional Services Quote Pricing</h5>
+            <div class="ibox-tools">
+                <a class="collapse-link">
+                    <i class="fa fa-chevron-up"></i>
+                </a>
+                <a class="close-link">
+                    <i class="fa fa-times"></i>
+                </a>
+            </div>
+        </div>
+        <div class="ibox-content">
+            <div class="table-responsive">
+                <table class="table table-striped table-bordered table-hover quotetable" >
+                    <thead>
+                    <tr>
+                        <th>Role</th>
+                        <% if @basic['pricing'] != 'fixed' %>
+                            <th class="text-right">Hours</th>
+                            <th class="text-right">Rate</th>
+                        <% end %>
+                        <th class="text-right">Total</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                        <% @quote_pricing.each do |item| %>
+                            <tr class="gradeX">
+                                <td><%= item.role %></td>
+                                <% if @basic['pricing'] != 'fixed' %>
+                                    <td class="text-right"><%= item.hours %></td>
+                                    <td class="text-right">
+                                        <% if item.rate != "" %>
+                                            <%= number_to_currency(item.rate) %>
+                                        <% end %>
+                                    </td>
+                                <% end %>
+                                <td class="text-right"><%= number_to_currency(item.total) %></td>
+                            </tr>
+                        <% end %>
+                        <tr>
+                            <th style="font-wight:bold;">Total</th>
+                            <% if @basic['pricing'] != 'fixed' %>
+                                <th class="text-right"><%= @qpt.hours %></th>
+                                <th class="text-right">Average: <%= number_to_currency(@qpt.rate) %></th>
+                            <% end %>
+                            <th class="text-right"><%= number_to_currency(@qpt.dollars) %></th>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,41 @@
+<div id="assumptiondetail">
+    <div class="ibox float-e-margins">
+        <div class="ibox-title">
+            <h5>Additional SOW Assumptions</h5>
+            <div class="ibox-tools">
+                <a class="collapse-link">
+                    <i class="fa fa-chevron-up"></i>
+                </a>
+                <a class="close-link">
+                    <i class="fa fa-times"></i>
+                </a>
+            </div>
+        </div>
+        <div class="ibox-content">
+        <div class="table-responsive">
+            <table class="table table-striped table-bordered table-hover quotetable" >
+                <thead>
+                <tr>
+                    <th>Assumption</th>
+                </tr>
+                </thead>
+                <tbody>
+                    <% @assumptions.each do |item| %>
+                        <tr class="gradeX">
+                            <td class="center">&bull; <%= item.assumption %></td>
+                        </tr>
+                    <% end %>
+                </tbody>
+            </table>
+        </div>
+
+        </div>
+        <%= form_tag('quote/createsow', method: 'post', remote: 'true', class:'form-horizontal new_article', id:'createsow', dataType:'script') do %>
+        <%= hidden_field_tag :authenticity_token, form_authenticity_token %>  
+        <%= hidden_field_tag :clientname, @basic['customer'] %>  
+            <div class="btn-group pull-right" style="display:none;">
+                <button id="sowbutton" class="btn btn-primary" type="submit"><i class="fa fa-check"></i>&nbsp;Create SOW</button>
+            </div>
+        <% end %>
+    </div>
+</div>

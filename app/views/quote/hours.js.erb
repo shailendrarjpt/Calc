@@ -1,0 +1,42 @@
+var html = '<%= escape_javascript(render :partial => "quote/hours") %>';
+var html2 = '<%= escape_javascript(render :partial => "quote/rates") %>';
+var html3 = '<%= escape_javascript(render :partial => "quote/assumptions") %>';
+
+'<% if @mspricingag != nil or @mspricingida != nil %>'
+    var html4 = '<%= escape_javascript(render :partial => "mservices/managed_services_quote") %>';
+    $('#msag').html(html4);
+'<% end %>'
+
+$('#quotedetail').html(html);
+$('#quotepricing').html(html2);
+$('#assumptions').html(html3);
+$('#quotewindow').css("display","block");
+
+$(document).ready(function(){
+    $('.quotetable').DataTable({
+        paging: false,
+        searching: false,
+        ordering: false,
+        info: false,
+        responsive: true,
+        dom: '<"html5buttons"B>lTfgitp',
+        buttons: [
+            {extend: 'copy'},
+            {extend: 'csv'},
+            {extend: 'excel', title: 'customer - project'},
+            {extend: 'pdf', title: 'customer - project'},
+
+            {extend: 'print',
+             customize: function (win){
+                    $(win.document.body).addClass('white-bg');
+                    $(win.document.body).css('font-size', '10px');
+                    $(win.document.body).find('table')
+                            .addClass('compact')
+                            .css('font-size', 'inherit');
+            }
+            }
+        ]
+
+    });
+
+});

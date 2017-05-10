@@ -1,0 +1,17 @@
+html = '<%= escape_javascript(render :partial => "mservices/managed_services_ag") %>';
+$('#msarea').append(html);
+$('#mswindow').css("display","block");
+$("#quotepartial").validator('update');
+$('#mstab').css("display","block");
+
+$(".spinusermonths").TouchSpin({
+        min: 12,
+        max: 100,
+        step: 12,
+        decimals: 0,
+        buttondown_class: 'btn btn-white',
+        buttonup_class: 'btn btn-white'
+});
+
+$('.chosen-select').chosen({width: "100%"});
+$(".helpmsg").tooltip();
